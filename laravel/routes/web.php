@@ -18,12 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/api/participates', ParticipateController::class,'show');
-Route::post('/api/participates', [ParticipateController::class,'store']);
-Route::put('/api/participates', ParticipateController::class,'update');
-Route::delete('/api/participates', ParticipateController::class,'destroy');
-
-Route::get('/participates/new', ParticipateController::class,'newView');
-Route::get('/participates/edit/{id}', ParticipateController::class,'editView');
-Route::get('/participates/list', ParticipateController::class,'listView');
+Route::get('api/participate',[ParticipateController::class,'index']);
+Route::get('/api/participate', ParticipateController::class,'show');
+Route::post('/api/participate', [ParticipateController::class,'store']);
+Route::put('/api/participate', ParticipateController::class,'update');
+Route::delete('/api/participats', ParticipateController::class,'destroy');
+Route::get('/participate/new', ParticipateController::class,'newView');
+Route::get('/participate/edit/{id}', ParticipateController::class,'editView');
+Route::get('/participate/list', ParticipateController::class,'listView');
