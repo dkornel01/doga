@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ParticipateController;
+use App\Models\Participate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/api/participates', ParticipateController::class,'show');
+Route::post('/api/participates', [ParticipateController::class,'store']);
+Route::put('/api/participates', ParticipateController::class,'update');
+Route::delete('/api/participates', ParticipateController::class,'destroy');
+
+Route::get('/participates/new', ParticipateController::class,'newView');
+Route::get('/participates/edit/{id}', ParticipateController::class,'editView');
+Route::get('/participates/list', ParticipateController::class,'listView');

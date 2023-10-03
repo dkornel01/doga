@@ -12,6 +12,6 @@ class Event extends Model
         'event_id',
         'date',
         'agency_id',
-        '',
+        'number',
     ];
 }

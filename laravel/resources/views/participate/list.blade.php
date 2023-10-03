@@ -3,7 +3,7 @@
     {{csrf_field()}}
     {{csrf_token('Get')}}
     <div class="form-group">
-        <input type='submit' value="{{$task->title}}">
+        <input type='submit' value="{{$participate->title}}">
     </div>
     </form>
     @endforeach

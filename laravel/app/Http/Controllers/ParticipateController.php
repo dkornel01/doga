@@ -45,7 +45,7 @@ class ParticipateController extends Controller
     }
     public function editView(){
         $participates=Participate::all();
-        $Task=Participate::all();
+        $participates=Participate::all();
         return $participates('participates.edit',['participates'=> $participates]);
     }
     public function listView(){
